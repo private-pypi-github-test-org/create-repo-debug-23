@@ -1,0 +1,11 @@
+name: sync-index
+on:
+ push:
+ schedule:
+  - cron: "* * * * *"
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: private-pypi/private-pypi-github-update-index@master
+
